@@ -40,18 +40,16 @@ st.write("""Welcome to University Admissions Predictor app!
             This app predicts your chances of admission to an university
             Please enter the information about your application package required below""")
 
-with st.form(key = 'information', clear_on_submit=True):
-    gre_score = st.sidebar.slider("GRE score", 1, 10, 5)
-    toefl_score = st.sidebar.slide('TOEFL score', 1, 10, 5)
-    uni_rating = st.sidebar.slide('Rating of the University you are applying to', 1,10,5)
-    sop = st.sidebar.slide('Strength of your Statement of Purpose',1,10,5)
-    lor = st.sidebar.slide('Strength of your Letter of Recommendation', 1,10,5)
-    cgpa = st.sidebar.slide('CGPA score',1, 10, 5)
-    ra = st.selectbox('Resesarch Experirnce (0 for No and 1 for Yes)', 1,10,5)
+gre_score = st.sidebar.slider("GRE score", 1, 10, 5)
+toefl_score = st.sidebar.slide('TOEFL score', 1, 10, 5)
+uni_rating = st.sidebar.slide('Rating of the University you are applying to', 1,10,5)
+sop = st.sidebar.slide('Strength of your Statement of Purpose',1,10,5)
+lor = st.sidebar.slide('Strength of your Letter of Recommendation', 1,10,5)
+cgpa = st.sidebar.slide('CGPA score',1, 10, 5)
+ra = st.selectbox('Resesarch Experirnce (0 for No and 1 for Yes)', 1,10,5)
 
 # PREDICTION
-if st.form_submit_button('Predict'):
-    data = pd.DataFrame({
+ data = pd.DataFrame({
         'GRE Score': [gre_score],
         'TOEFL Score': [toefl_score],
         'University Rating': [uni_rating],
@@ -63,7 +61,7 @@ if st.form_submit_button('Predict'):
 
 prediction = lm.predict(data)
 
-st.balloons()
-st.success(f"Predicted Probability: {prediction[0]:,.2f}",icon="✅")
+st.markdown(prediction)
+
 
 
