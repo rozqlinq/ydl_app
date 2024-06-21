@@ -47,4 +47,4 @@ tzdata==2024.1
 urllib3==2.2.2
 watchdog==4.0.1
 sklearn ==0.0
-turtle = 0.0.1
+turtle == 0.0.1
