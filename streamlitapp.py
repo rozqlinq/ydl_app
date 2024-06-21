@@ -41,14 +41,13 @@ st.write("""Welcome to University Admissions Predictor app!
             Please enter the information about your application package required below""")
 
 with st.form(key = 'information', clear_on_submit=True):
-    gre_score = st.number_input('Enter your GRE score')
-    toefl_score = st.number_input('Enter your TOEFL score')
-    uni_rating = st.selectbox('Enter the Rating of the University you are applying to', [1,2,3,4,5])
-    sop = st.selectbox('Enter the approximate Strength of your Statement of Purpose', [1,1.5,2,2.5,3,3.5,4,4.5,5])
-    lor = st.selectbox('Enter the approximate Strength of your Letter of Recommendation',
-                       [1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5])
-    cgpa = st.number_input('Enter your CGPA score')
-    ra = st.selectbox('Do you have Resesarch Experirnce? (0 for No and 1 for Yes)', [0,1])
+    gre_score = st.sidebar.slider("GRE score", 1, 10, 5)
+    toefl_score = st.sidebar.slide('TOEFL score', 1, 10, 5)
+    uni_rating = st.sidebar.slide('Rating of the University you are applying to', 1,10,5)
+    sop = st.sidebar.slide('Strength of your Statement of Purpose',1,10,5)
+    lor = st.sidebar.slide('Strength of your Letter of Recommendation', 1,10,5)
+    cgpa = st.sidebar.slide('CGPA score',1, 10, 5)
+    ra = st.selectbox('Resesarch Experirnce (0 for No and 1 for Yes)', 1,10,5)
 
 # PREDICTION
 if st.form_submit_button('Predict'):
