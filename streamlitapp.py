@@ -55,7 +55,7 @@ with st.form(key = 'information', clear_on_submit=True):
         'TOEFL Score': [toefl_score],
         'University Rating': [uni_rating],
         'SOP': [sop],
-        'LOR': [lor],
+        'LOR ': [lor],
         'CGPA': [cgpa],
         'Research': [ra]
     })
