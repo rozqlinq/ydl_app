@@ -49,7 +49,7 @@ cgpa = st.sidebar.slide('CGPA score',1, 10, 5)
 ra = st.selectbox('Resesarch Experirnce (0 for No and 1 for Yes)', 1,10,5)
 
 # PREDICTION
- data = pd.DataFrame({
+data = pd.DataFrame({
         'GRE Score': [gre_score],
         'TOEFL Score': [toefl_score],
         'University Rating': [uni_rating],
