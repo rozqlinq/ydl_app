@@ -9,7 +9,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn import metrics
 
 
-adm = pd.read_csv('/Users/rozalina.alkeyeva/Desktop/adm_data.csv')
+adm = pd.read_csv('adm_data.csv')
 
 # CHECKING NAN
 has_nan = adm.isnull().sum()
