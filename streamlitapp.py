@@ -50,7 +50,7 @@ with st.form(key = 'information', clear_on_submit=True):
     ra = st.selectbox('Do you have Resesarch Experirnce? (0 for No and 1 for Yes)', [0,1])
     
     if st.form_submit_button('Predict'):
-    data = pd.DataFrame({
+        data = pd.DataFrame({
         'GRE Score': [gre_score],
         'TOEFL Score': [toefl_score],
         'University Rating': [uni_rating],
