@@ -59,10 +59,8 @@ with st.form(key = 'information', clear_on_submit=True):
         'CGPA': [cgpa],
         'Research': [ra]
     })
-
-prediction = lm.predict(data)
-
-st.balloons()
-st.success(f"Predicted Probability: {prediction[0]:,.2f}",icon="✅")
+        prediction = lm.predict(data)
+        st.balloons()
+        st.success(f"Predicted Probability: {prediction[0]:,.2f}",icon="✅")
 
 
