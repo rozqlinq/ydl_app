@@ -36,17 +36,17 @@ st.set_page_config(layout='centered')
 
 st.title('University Admissions Predictor')
 st.write("""Welcome to University Admissions Predictor app!
-            This app predicts your chances of admission to an university
+            This app predicts your chances of admission to an university.
             Please enter the information about your application package required below""")
 
 with st.form(key = 'information', clear_on_submit=True):
-    gre_score = st.number_input('Enter your GRE score')
-    toefl_score = st.number_input('Enter your TOEFL score')
+    gre_score = st.number_input('Enter your GRE score (out of 340)')
+    toefl_score = st.number_input('Enter your TOEFL score (out of 120)')
     uni_rating = st.selectbox('Enter the Rating of the University you are applying to', [1,2,3,4,5])
     sop = st.selectbox('Enter the approximate Strength of your Statement of Purpose', [1,1.5,2,2.5,3,3.5,4,4.5,5])
     lor = st.selectbox('Enter the approximate Strength of your Letter of Recommendation',
                        [1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5])
-    cgpa = st.number_input('Enter your CGPA score')
+    cgpa = st.number_input('Enter your CGPA score (out of 4.00)')
     ra = st.selectbox('Do you have Resesarch Experirnce? (0 for No and 1 for Yes)', [0,1])
     
     if st.form_submit_button('Predict'):
