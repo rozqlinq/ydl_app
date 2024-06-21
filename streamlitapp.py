@@ -48,7 +48,7 @@ with st.form(key = 'information', clear_on_submit=True):
                        [1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5])
     cgpa = st.number_input('Enter your CGPA score')
     ra = st.selectbox('Do you have Resesarch Experirnce? (0 for No and 1 for Yes)', [0,1])
-
+st.form_submit_button()
 # PREDICTION
 if st.form_submit_button('Predict'):
     data = pd.DataFrame({
