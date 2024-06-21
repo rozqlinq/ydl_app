@@ -33,7 +33,6 @@ lm.fit(X_train, Y_train)
 
 # APP INTERFACE
 st.set_page_config(layout='centered')
-st.image('uni.jpg')
 
 st.title('University Admissions Predictor')
 st.write("""Welcome to University Admissions Predictor app!
