@@ -6,10 +6,12 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
+import tkinter
+import tk
 from sklearn import metrics
 matplotlib.use('tkagg')
 
-adm = pd.read_csv('adm_data.csv')
+adm = pd.read_csv('/Users/rozalina.alkeyeva/Desktop/adm_data.csv')
 
 # CHECKING NAN
 has_nan = adm.isnull().sum()
